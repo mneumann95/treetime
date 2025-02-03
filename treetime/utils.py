@@ -428,6 +428,8 @@ def tree_inference(aln_fname, tree_fname, tmp_dir=None,
         try:
             if method.lower()=='iqtree':
                 T = build_newick_iqtree(aln_fname)
+            if method.lower()=='iqtree2':
+                T = build_newick_iqtree(aln_fname)
             elif method.lower()=='fasttree':
                 T = build_newick_fasttree(aln_fname, nuc=True)
             elif method.lower()=='raxml':
